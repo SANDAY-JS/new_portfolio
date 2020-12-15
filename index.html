@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-menu-container">
+        <ul class="header-menu">
+          <li><a class="menu-item" id="to-about">About</a></li>
+          <li><a class="menu-item" id="to-projects">Projects</a></li>
+          <li><a class="menu-item" id="to-supports">Supports</a></li>
+          <li><a class="menu-item" id="to-payment">Payment</a></li>
+          <li><a class="menu-item" id="to-contact">Contact</a></li>
+        </ul>
+        <ul class="hamburger-background">
+          <li class="line line1"></li>
+          <li class="line line2"></li>
+          <li class="line line3"></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="top-container">
+        <h1>Sun Higuchi</h1>
+        <small>Front-end developer</small>
+        <svg viewBox="0 0 500 140" preserveAspectRatio="xMinYMin meet">
+          <path
+            d="M0,100 C100,0 200,250 500,70 V200 L00,200 Z"
+            style="stroke: none; fill: #eee"
+          ></path>
+        </svg>
+        <i class="fas fa-arrow-down" id="to-about"></i>
+      </div>
+
+      <!-- About -->
+      <div class="about-me-container">
+        <h2 class="big-text" id="about-me">About me</h2>
+        <p class="text">
+          ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb制作活動を行っています、樋口賛と申します。
+        </p>
+        <br />
+        <p class="text">
+          Web制作やWebデザインを始め、ワードプレスのカスタマイズなど、様々な業務を受け付けております。
+        </p>
+        <br />
+        <p class="text">
+          下記に可能な業務内容などを記載しておりますので、ご覧いただけますと幸いです。
+        </p>
+
+        <!-- Skills -->
+        <div class="my-skills-container">
+          <h4>My Skills</h4>
+          <ul class="my-skills">
+            <li>
+              <i class="fab fa-html5"></i>
+              <h4>HTML</h4>
+            </li>
+            <li>
+              <i class="fab fa-css3"></i>
+              <h4>CSS</h4>
+            </li>
+            <li>
+              <i class="fab fa-js-square"></i>
+              <h4>JavaScript</h4>
+            </li>
+            <li>
+              <i class="fab fa-sass"></i>
+              <h4>Sass/SCSS</h4>
+            </li>
+            <li>
+              <i class="fab fa-wordpress-simple"></i>
+              <h4>Wordpress</h4>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <section class="my-projects">
+        <h2 class="big-text" id="my-projects">
+          My projects <br /><span class="japanese-big-text">制作実績</span>
+        </h2>
+        <div class="porjects-box" id="grid-box">
+          <div class="pro1-container">
+            <small class="project-text-1">所属バンドのホームページ(SP)</small>
+            <a href="https://sanday-js.github.io/AVALANCHE/">
+              <img
+                class="band-img"
+                src="./images/avalanche.jpg"
+                alt="band image"
+              />
+              <p class="show-more">詳細を見る</p></a
+            >
+          </div>
+          <div class="pro2-container">
+            <small class="project-text-2">Wordpress版ポートフォリオ</small>
+            <a href="https://sanday-js.github.io/AVALANCHE/">
+              <img
+                class="band-img"
+                src="./images/portfolio.jpg"
+                alt="band image"
+              />
+              <p class="show-more">詳細を見る</p></a
+            >
+          </div>
+          <div class="pro3-container">
+            <small class="project-text-3">現在ご覧のポートフォリオ</small>
+            <a href="https://sanday-js.github.io/AVALANCHE/">
+              <img
+                class="band-img"
+                src="./images/portfolio-next.jpg"
+                alt="band image"
+              />
+              <p class="show-more">詳細を見る</p></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 対応内容 -->
+      <section class="correspondence-contents">
+        <h2 class="big-text" id="support-contents">
+          Support Contents <br />
+          <span class="japanese-big-text">対応内容</span>
+        </h2>
+
+        <!-- Ele1 -->
+        <div class="first-element element">
+          <div class="element-inside-container">
+            <img
+              src="./images/web-production.jpg"
+              alt="web production"
+              class="conrrespondence-contents-img ccimg1"
+            />
+            <h2 class="pointer-none">Web制作</h2>
+          </div>
+          <div class="ccText">
+            <p class="japanese-text">
+              ユーザビリティを意識したWebサイトを制作させていただきます。デザイン制作からコーディング、CMS導入までお受けしております。<br />スマートフォンサイトの制作もお任せください。
+            </p>
+            <a href="#">料金を確認する</a>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Ele2 -->
+        <div class="second-element element">
+          <div class="element-inside-container">
+            <img
+              src="./images/coding.jpg"
+              alt="coding"
+              class="conrrespondence-contents-img ccimg2"
+            />
+            <h2 class="pointer-none">コーディング</h2>
+          </div>
+          <div class="ccText">
+            <p class="japanese-text">
+              HTMLやCSSはもちろん、SassやJavaScriptの案件も受けつけております。ただコードを書くだけでなく、SEO対策や読みやすさを意識したコーディングを致します。
+            </p>
+            <a href="#">料金を確認する</a>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Ele3 -->
+        <div class="third-element element">
+          <div class="element-inside-container">
+            <img
+              src="./images/wordpress.jpg"
+              alt="wordpress customize"
+              class="conrrespondence-contents-img ccimg3"
+            />
+            <h2 class="pointer-none">Wordpress制作<br />カスタマイズ</h2>
+          </div>
+          <div class="ccText">
+            <p class="japanese-text">
+              Wordpress制作も受け付けております。カスタマイズからコーディングのみの案件まで対応致します。<br />テーマを使用した案件も得意としておりますので、ぜひお気軽にご相談ください。
+            </p>
+            <a href="#">料金を確認する</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment Sec -->
+      <section class="payment">
+        <h2 class="big-text" id="payment">
+          Payment
+          <br />
+          <span class="japanese-big-text">料金</span>
+        </h2>
+
+        <div class="web-production-payment margin-box">
+          <h3>Web制作</h3>
+          <table class="japanese-text">
+            <thead>
+              <tr>
+                <th>ご依頼内容</th>
+                <th>料金</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  Web制作一式<br />（デザイン、サーバー、ドメイン取得込み）
+                </td>
+                <td>
+                  ¥7000 × ページ数 <br />
+                  + ¥2000（サーバー、ドメイン取得代）
+                </td>
+              </tr>
+              <tr>
+                <td>一部機能のみ 例）コンタクトフォームのみ</td>
+                <td>要相談</td>
+              </tr>
+              <tr>
+                <td>その他のご依頼（柔軟に対応致します）</td>
+                <td>要相談</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="codong-payment margin-box">
+          <h3>コーディング</h3>
+          <table class="japanese-text">
+            <thead>
+              <tr>
+                <th>ご依頼内容</th>
+                <th>料金</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>ヘッダー、フッター作成</td>
+                <td>¥4000（ヘッダー） + ¥2000（フッター）</td>
+              </tr>
+              <tr>
+                <td>Webページ一式</td>
+                <td>
+                  ¥5000 × ページ数 <br />
+                  + ¥4000（ヘッダー） + ¥2000（フッター）
+                </td>
+              </tr>
+              <tr>
+                <td>その他のご依頼（柔軟に対応致します）</td>
+                <td>要相談</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="wordpress-payment margin-box">
+          <h3 class="pointer-none">Wordpress制作、カスタマイズ</h3>
+          <table class="japanese-text">
+            <thead>
+              <tr>
+                <th>ご依頼内容</th>
+                <th>料金</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  サイト構築一式（サーバー＆ドメイン、デザイン、コーディング）
+                </td>
+                <td>
+                  *5ページまで ¥24000～ <br />
+                  5ページ～10ページ ¥40000～
+                </td>
+              </tr>
+              <tr>
+                <td>コーディングのみ</td>
+                <td>
+                  ¥5000 × ページ数 <br />
+                  + ¥4000（ヘッダー） + ¥2000（フッター）
+                </td>
+              </tr>
+              <tr>
+                <td>その他のご依頼（柔軟に対応致します）</td>
+                <td>要相談</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>*ご依頼内容によって多少前後致します</p>
+      </section>
+    </main>
+
+    <footer>
+      <svg
+        class="second-svg"
+        viewBox="0 0 500 145"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMinYMin meet"
+      >
+        <path
+          d="M0,40 C100,120 200,-50 500,60 V0 L00,0 Z"
+          style="stroke: none"
+        ></path>
+      </svg>
+
+      <section class="contact">
+        <h2 class="big-text" id="contact">
+          Contact<br />
+          <span class="japanese-big-text"> お問い合わせ </span>
+        </h2>
+        <div class="contact-means">
+          <ul>
+            <li>
+              <a href="https://github.com/SANDAY-JS" target="_blank"
+                ><i class="fab fa-github-square" id="github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100008797329230"
+                target="_blank"
+                ><i class="fab fa-facebook" id="facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/SunHiguchi" target="_blank"
+                ><i class="fab fa-twitter-square" id="twitter"></i
+              ></a>
+            </li>
+          </ul>
+
+          <!-- Form -->
+          <form action="https://formspree.io/f/mgepnnwb" method="POST">
+            <label for="name" class="name-label">お名前、または企業名：</label
+            ><br />
+            <input
+              type="text"
+              name="name"
+              class="name"
+              id="name"
+              required
+            /><br />
+
+            <label for="email" class="email-label">メールアドレス：</label
+            ><br />
+            <input
+              type="email"
+              name="_replyTo"
+              class="email"
+              id="email"
+              required
+            /><br />
+
+            <label for="message" class="message-label">お問い合わせ内容：</label
+            ><br />
+            <textarea
+              name="message"
+              class="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+            ></textarea
+            ><br />
+
+            <button type="submit" class="submit-btn">送信</button>
+          </form>
+        </div>
+      </section>
+
+      <button class="top-btn"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+// Contact
+$footer-text-color: #eee;
+$footer-background-color: linear-gradient(27deg, #162447, #673ab7);
+$pinkColor: #e43f5a;
+
+svg.second-svg {
+  fill: $footer-text-color;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+
+  path {
+    height: 100%;
+  }
+}
+
+.contact {
+  @include setWidth();
+  position: relative;
+  background: $top-background-color;
+  width: 100%;
+  padding-top: 145px;
+
+  h2 {
+    color: $footer-text-color;
+  }
+
+  .contact-means {
+    width: 50vw;
+    min-height: 30rem;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+
+    display: grid;
+    grid-template:
+      "... ..... ... ....... ..."
+      "... means ... n-label ..." 0.75rem
+      "... means ...  name   ..." 1.5rem
+      "... means ... ....... ..." 1.5rem
+      "... means ... e-label ..." 0.75rem
+      "... means ...  email  ..." 1.5rem
+      "... means ... ....... ..." 1.5rem
+      "... means ... m-label ..." 0.75rem
+      "... means ... message ..." 4rem
+      "... means ... message ..." 4rem
+      "... means ... message ..." 4rem
+      "... means ... message ..." 4rem
+      "... ..... ... ....... ..." 1.5rem
+      "... ..... ...   btn   ..." 1.7rem
+      "... ..... ... ....... ..."
+      / 1fr minmax(3rem, 7rem) 1rem 3fr 1fr;
+
+    ul {
+      @include flex(column, space-around, auto);
+
+      grid-area: means;
+      border-radius: 10px;
+      background: #fff;
+
+      li {
+        i {
+          font-size: 3rem;
+        }
+        #github {
+          color: rgb(24, 24, 26);
+        }
+        #facebook {
+          color: rgb(39, 39, 177);
+        }
+        #twitter {
+          color: rgb(23, 124, 219);
+        }
+      }
+    }
+
+    label {
+      font-size: 0.75rem;
+    }
+
+    .name-label {
+      grid-area: n-label;
+    }
+    input.name {
+      grid-area: name;
+    }
+
+    .email-label {
+      grid-area: e-label;
+    }
+    input.email {
+      grid-area: email;
+    }
+
+    .message-label {
+      grid-area: m-label;
+    }
+    textarea.message {
+      grid-area: message;
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+    }
+    button {
+      grid-area: btn;
+    }
+  }
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  background: $pinkColor;
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    .contact-means {
+      width: 50vw;
+
+      grid-template:
+        "... ..... ..... ..... ..."
+        "... means means means ..." 4rem
+        "... .....  ....   ... ..." 1rem
+        "... ..... n-label ... ..." 0.75rem
+        "... .....  ....   ... ..." 0.2rem
+        "... .....  name   ... ..." 1.5rem
+        "... .....  ....   ... ..." 1rem
+        "... ..... e-label ... ..." 0.75rem
+        "... .....  ....   ... ..." 0.2rem
+        "... ..... email   ... ..." 1.5rem
+        "... ..... .....   ... ..." 1rem
+        "... ..... m-label ... ..." 0.75rem
+        "... ..... .....   ... ..." 0.2rem
+        "... ..... message ... ..." 15rem
+        "... ..... ....... ... ..." 1rem
+        "... .....  btn    ... ..." 1.7rem
+        "... ..... ... ....... ..."
+        / auto 1.5rem 1fr 1.5rem auto;
+
+      ul {
+        flex-direction: row;
+        li {
+          i {
+            font-size: 2.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .contact {
+    .contact-means {
+      width: 75vw;
+
+      grid-template:
+        "... ..... ..... ..... ..."
+        "... means means means ..." 2.75rem
+        "... .....  ....   ... ..." 1rem
+        "... ..... n-label ... ..." 0.75rem
+        "... .....  ....   ... ..." 0.2rem
+        "... .....  name   ... ..." 1.5rem
+        "... .....  ....   ... ..." 1rem
+        "... ..... e-label ... ..." 0.75rem
+        "... .....  ....   ... ..." 0.2rem
+        "... ..... email   ... ..." 1.5rem
+        "... ..... .....   ... ..." 1rem
+        "... ..... m-label ... ..." 0.75rem
+        "... ..... .....   ... ..." 0.2rem
+        "... ..... message ... ..." 10rem
+        "... ..... ....... ... ..." 1rem
+        "... .....  btn    ... ..." 1.5rem
+        "... ..... ... ....... ..."
+        / auto 1.5rem 1fr 1.5rem auto;
+    }
+
+    ul {
+      i {
+        font-size: 1.75rem !important;
+      }
+    }
+  }
+}

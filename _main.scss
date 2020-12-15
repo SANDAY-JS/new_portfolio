@@ -1,0 +1,356 @@
+// Variables
+$text-color: rgb(56, 46, 46);
+$big-text-color: #162447;
+$backgroundColor: #eee;
+$top-background-color: linear-gradient(153deg, #162447, #673ab7);
+$main-color: #673ab7;
+$title-background-color: rgba(253, 249, 249, 0.096);
+$pinkColor: #e43f5a;
+$poppins: "Poppins", sans-serif;
+$japaneseText: "Kosugi Maru", sans-serif;
+
+// Methods
+@mixin marginBox {
+  margin: 1rem;
+}
+
+@mixin flex($direction, $justify, $height) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  height: $height;
+}
+
+@mixin setWidth {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@mixin hoverTransform($method) {
+  &:hover {
+    transform: $method;
+  }
+}
+
+@mixin hoverOpacity {
+  &:hover {
+    opacity: 0.3;
+  }
+}
+
+@mixin gridItems {
+  &:hover img {
+    opacity: 0.55;
+  }
+
+  img {
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+}
+
+@mixin showMore {
+  &:hover .show-more {
+    opacity: 1;
+  }
+  .show-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: $text-color;
+    font-family: $japaneseText;
+    font-weight: bolder;
+  }
+}
+
+@mixin alignCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Codes
+.top-container {
+  position: relative;
+  overflow-x: hidden;
+  @include flex(column, center, 100vh);
+  background: $top-background-color;
+
+  h1 {
+    display: inline-block;
+    color: $backgroundColor;
+    animation-name: text-up;
+    animation-duration: 2s;
+    font-weight: bold;
+  }
+  small {
+    color: $backgroundColor;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  i.fa-arrow-down {
+    color: $backgroundColor;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 2rem;
+    animation: upDown 1s linear infinite;
+    cursor: pointer;
+    pointer-events: all;
+  }
+}
+
+@keyframes text-up {
+  from {
+    transform: translate(0, 30px);
+    opacity: 0.1;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 1rem);
+  }
+  85% {
+    transform: translate(0, -1rem);
+  }
+}
+
+.about-me-container {
+  width: 60vw;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+
+  .my-skills-container {
+    @include flex(column, center, auto);
+    width: 100%;
+    margin: 2rem 0 0 0;
+    height: 30vh;
+
+    h4 {
+      margin-top: 2rem;
+    }
+
+    .my-skills {
+      @include flex(row, space-around, 20vh);
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100%;
+
+      li {
+        @include flex(column, center, 6rem);
+        min-width: 3rem;
+        height: 80%;
+
+        &:hover i {
+          transform: rotate(360deg) scale(1.25);
+        }
+        i {
+          font-size: 4.5rem;
+          color: $pinkColor;
+          transition: 0.5s;
+        }
+
+        h4 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.my-projects {
+  #grid-box {
+    min-height: 10rem;
+    display: grid;
+    grid-template:
+      "... .... ... .... ... .... ..."
+      "... pro1 ... pro2 ... pro3 ..." 2fr
+      "... .... ... .... ... .... ..."
+      / 2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
+
+    .pro1-container {
+      grid-area: pro1;
+      text-align: center;
+      padding: 0 1rem;
+      transition: all 0.3s;
+      position: relative;
+
+      @include hoverTransform(scale(1.01));
+      @include gridItems();
+      @include showMore();
+    }
+    .pro2-container {
+      grid-area: pro2;
+      text-align: center;
+      padding: 0 1rem;
+      transition: all 0.5s;
+      @include hoverTransform(scale(1.01));
+      @include gridItems();
+      @include showMore();
+    }
+    .pro3-container {
+      grid-area: pro3;
+      text-align: center;
+      padding: 0 1rem;
+      transition: all 0.5s;
+
+      @include hoverTransform(scale(1.01));
+      @include gridItems();
+      @include showMore();
+    }
+  }
+}
+
+// 実績
+.correspondence-contents {
+  width: 94vw;
+  margin: 0 auto;
+
+  img {
+    display: inline-block;
+    width: 45vw;
+    border-radius: 10px;
+
+    @include hoverOpacity();
+  }
+
+  .element {
+    @include flex(row, center, auto);
+
+    .element-inside-container {
+      position: relative;
+
+      h2 {
+        font-size: 2rem;
+        @include alignCenter();
+        left: 50%;
+        color: $pinkColor;
+        white-space: pre;
+      }
+    }
+
+    .ccText {
+      padding: 3rem 5rem 0 5rem;
+
+      a {
+        margin-top: 1em;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.payment {
+  @include setWidth();
+
+  .margin-box {
+    margin-bottom: 2rem;
+  }
+  table {
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+
+    border-spacing: 0px;
+    border: 2px $main-color solid;
+  }
+
+  h3 {
+    color: $pinkColor;
+  }
+}
+
+/*----------------------------------
+---------- Media Queries ------------
+-----------------------------------*/
+
+@media screen and (max-width: 768px) {
+  .about-me-container {
+    width: 70vw;
+    padding: 4rem 0;
+
+    .my-skills-container {
+      .my-skills {
+        justify-content: space-between;
+        li {
+          i {
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .my-projects {
+    #grid-box {
+      grid-template:
+        "... .... ... .... ..."
+        "... pro1 ... pro2 ..." 2fr
+        "... .... ... .... ..." 1rem
+        "... pro3 ... .... ..." 2fr
+        "... .... ... .... ..."
+        / 2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
+    }
+  }
+
+  .correspondence-contents {
+    img {
+      width: 85vw;
+    }
+    .element {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .about-me-container {
+    .my-skills-container {
+      .my-skills {
+        li {
+          height: 6em;
+
+          h4 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  .my-projects {
+    #grid-box {
+      grid-template:
+        "... .... ..."
+        "... pro1 ..." 2fr
+        "... .... ..." 1rem
+        "... pro2 ..." 2fr
+        "... .... ..." 1rem
+        "... pro3 ..." 2fr
+        "... .... ..."
+        / 1rem 1fr 1rem;
+    }
+  }
+
+  .payment {
+    width: 95%;
+  }
+}

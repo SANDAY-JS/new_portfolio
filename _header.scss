@@ -1,0 +1,133 @@
+// Variables
+$main-color: #673ab7;
+$header-background-color: rgb(54, 54, 54);
+$header-text-color: #ddd;
+$pinkColor: #e43f5a;
+$big-text-color: #162447;
+
+// Functions
+@mixin flex($direction, $height) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-around;
+  align-items: center;
+  height: $height;
+}
+
+.header-menu-container {
+  height: 10vh;
+  width: 100%;
+  background: transparent;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  .header-menu {
+    @include flex(row, 10vh);
+
+    li {
+      height: 10vh;
+      width: 20%;
+
+      a {
+        display: block;
+        line-height: 10vh;
+        text-align: center;
+        color: $header-text-color;
+        cursor: pointer;
+        pointer-events: all;
+        transition: color 0.5s;
+      }
+
+      a.color-default {
+        &:hover {
+          color: $main-color;
+        }
+      }
+
+      a.color-not-default {
+        color: $pinkColor;
+
+        &:hover {
+          color: $big-text-color;
+        }
+      }
+    }
+  }
+
+  .hamburger-background {
+    width: 6vh;
+    height: 6vh;
+    background: transparent;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 10;
+
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    padding: 2px;
+  }
+  .line {
+    background: white;
+    height: 3px;
+    width: 95%;
+    z-index: 10;
+
+    transition: all 0.3s ease-out;
+  }
+}
+
+.click.header-menu-container {
+  top: 1rem;
+}
+.click.hamburger-background .line1 {
+  transform: rotate(45deg) translateX(2px);
+  transform-origin: 0 0;
+}
+.click.hamburger-background .line2 {
+  opacity: 0;
+}
+.click.hamburger-background .line3 {
+  transform: rotate(-45deg) translateX(-2px);
+  transform-origin: 0 0;
+}
+
+// Up and Down when scrolled
+#scroll.header-menu-container {
+  top: -10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .header-menu-container {
+    top: -10vh;
+    .header-menu {
+      //階層化して書かなあかん
+      width: 95%;
+    }
+    .hamburger-background {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .header-menu-container {
+    .header-menu {
+      li {
+        &:nth-child(4) {
+          display: none;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
