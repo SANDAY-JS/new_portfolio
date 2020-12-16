@@ -38,11 +38,7 @@ $big-text-color: #162447;
         color: $header-text-color;
         cursor: pointer;
         pointer-events: all;
-        transition: color 0.5s;
-        
-         &:hover {
-          color: $main-color;
-        }
+        transition: color 0.5s;  
       }
 
       a.color-default {
