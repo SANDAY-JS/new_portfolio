@@ -219,7 +219,7 @@ $japaneseText: "Kosugi Maru", sans-serif;
   }
 }
 
-// 実績
+// 対応内容
 .correspondence-contents {
   width: 94vw;
   margin: 0 auto;
@@ -256,6 +256,10 @@ $japaneseText: "Kosugi Maru", sans-serif;
         text-align: center;
       }
     }
+  }
+
+  .second-element {
+    flex-direction: row-reverse;
   }
 }
 
