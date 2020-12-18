@@ -509,6 +509,13 @@
   text-align: center;
 }
 
+.correspondence-contents .second-element {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
 .payment {
   width: 80%;
   margin: 0 auto;
@@ -568,7 +575,14 @@
     margin-top: 0;
   }
   .my-projects #grid-box {
-    grid-template: "... .... ..." "... pro1 ..." 2fr "... .... ..." 1rem "... pro2 ..." 2fr "... .... ..." 1rem "... pro3 ..." 2fr "... .... ..." / 1rem 1fr 1rem;
+    grid-template: "... .... ..."
+ "... pro1 ..." 2fr
+ "... .... ..." 1rem
+ "... pro2 ..." 2fr
+ "... .... ..." 1rem
+ "... pro3 ..." 2fr
+ "... .... ..."
+ / 1rem 1fr 1rem;
   }
   .payment {
     width: 95%;
@@ -693,7 +707,24 @@ svg.second-svg path {
 @media screen and (max-width: 768px) {
   .contact .contact-means {
     width: 50vw;
-    grid-template: "... ..... ..... ..... ..." "... means means means ..." 4rem "... .....  ....   ... ..." 1rem "... ..... n-label ... ..." 0.75rem "... .....  ....   ... ..." 0.2rem "... .....  name   ... ..." 1.5rem "... .....  ....   ... ..." 1rem "... ..... e-label ... ..." 0.75rem "... .....  ....   ... ..." 0.2rem "... ..... email   ... ..." 1.5rem "... ..... .....   ... ..." 1rem "... ..... m-label ... ..." 0.75rem "... ..... .....   ... ..." 0.2rem "... ..... message ... ..." 15rem "... ..... ....... ... ..." 1rem "... .....  btn    ... ..." 1.7rem "... ..... ... ....... ..." / auto 1.5rem 1fr 1.5rem auto;
+    grid-template: "... ..... ..... ..... ..."
+ "... means means means ..." 4rem
+ "... .....  ....   ... ..." 1rem
+ "... ..... n-label ... ..." 0.75rem
+ "... .....  ....   ... ..." 0.2rem
+ "... .....  name   ... ..." 1.5rem
+ "... .....  ....   ... ..." 1rem
+ "... ..... e-label ... ..." 0.75rem
+ "... .....  ....   ... ..." 0.2rem
+ "... ..... email   ... ..." 1.5rem
+ "... ..... .....   ... ..." 1rem
+ "... ..... m-label ... ..." 0.75rem
+ "... ..... .....   ... ..." 0.2rem
+ "... ..... message ... ..." 15rem
+ "... ..... ....... ... ..." 1rem
+ "... .....  btn    ... ..." 1.7rem
+ "... ..... ... ....... ..."
+ / auto 1.5rem 1fr 1.5rem auto;
   }
   .contact .contact-means ul {
     -webkit-box-orient: horizontal;
@@ -709,7 +740,24 @@ svg.second-svg path {
 @media screen and (max-width: 568px) {
   .contact .contact-means {
     width: 75vw;
-    grid-template: "... ..... ..... ..... ..." "... means means means ..." 2.75rem "... .....  ....   ... ..." 1rem "... ..... n-label ... ..." 0.75rem "... .....  ....   ... ..." 0.2rem "... .....  name   ... ..." 1.5rem "... .....  ....   ... ..." 1rem "... ..... e-label ... ..." 0.75rem "... .....  ....   ... ..." 0.2rem "... ..... email   ... ..." 1.5rem "... ..... .....   ... ..." 1rem "... ..... m-label ... ..." 0.75rem "... ..... .....   ... ..." 0.2rem "... ..... message ... ..." 10rem "... ..... ....... ... ..." 1rem "... .....  btn    ... ..." 1.5rem "... ..... ... ....... ..." / auto 1.5rem 1fr 1.5rem auto;
+    grid-template: "... ..... ..... ..... ..."
+ "... means means means ..." 2.75rem
+ "... .....  ....   ... ..." 1rem
+ "... ..... n-label ... ..." 0.75rem
+ "... .....  ....   ... ..." 0.2rem
+ "... .....  name   ... ..." 1.5rem
+ "... .....  ....   ... ..." 1rem
+ "... ..... e-label ... ..." 0.75rem
+ "... .....  ....   ... ..." 0.2rem
+ "... ..... email   ... ..." 1.5rem
+ "... ..... .....   ... ..." 1rem
+ "... ..... m-label ... ..." 0.75rem
+ "... ..... .....   ... ..." 0.2rem
+ "... ..... message ... ..." 10rem
+ "... ..... ....... ... ..." 1rem
+ "... .....  btn    ... ..." 1.5rem
+ "... ..... ... ....... ..."
+ / auto 1.5rem 1fr 1.5rem auto;
   }
   .contact ul i {
     font-size: 1.75rem !important;
