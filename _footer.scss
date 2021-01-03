@@ -153,6 +153,7 @@ svg.second-svg {
     }
   }
 }
+
 @media screen and (max-width: 568px) {
   .contact {
     .contact-means {
@@ -182,6 +183,56 @@ svg.second-svg {
     ul {
       i {
         font-size: 1.75rem !important;
+      }
+    }
+  }
+}
+
+// For IE
+@media all and (-ms-high-contrast: none) {
+  .contact {
+    .contact-means {
+      // For IE
+      display: -ms-flexbox;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+
+      ul {
+        padding: 1em 0.5em;
+        margin-right: 1em;
+      }
+
+      form {
+        input,
+        label {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+          padding: 0.2rem;
+          margin-top: 0.75em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (-ms-high-contrast: none) {
+  .contact {
+    .contact-means {
+      // For IE
+      display: -ms-flexbox;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+
+      ul {
+        width: 85%;
+        padding: 0.2em 0;
+        margin: 0;
       }
     }
   }
