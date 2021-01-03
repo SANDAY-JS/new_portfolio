@@ -202,6 +202,8 @@ $japaneseText: "Kosugi Maru", sans-serif;
   #grid-box {
     min-height: 10rem;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
     grid-template:
       "... .... ... .... ... .... ..."
       "... pro1 ... pro2 ... pro3 ..." 2fr
@@ -209,6 +211,10 @@ $japaneseText: "Kosugi Maru", sans-serif;
       / 2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
 
     .pro1-container {
+      grid-column: 1;
+      grid-row: 1;
+      -ms-grid-column: 1;
+      -ms-grid-row: 1;
       grid-area: pro1;
       text-align: center;
       padding: 0 1rem;
@@ -220,6 +226,10 @@ $japaneseText: "Kosugi Maru", sans-serif;
       @include showMore();
     }
     .pro2-container {
+      grid-column: 2;
+      grid-row: 1;
+      -ms-grid-column: 2;
+      -ms-grid-row: 1;
       grid-area: pro2;
       text-align: center;
       padding: 0 1rem;
@@ -229,6 +239,10 @@ $japaneseText: "Kosugi Maru", sans-serif;
       @include showMore();
     }
     .pro3-container {
+      grid-column: 3;
+      grid-row: 1;
+      -ms-grid-column: 3;
+      -ms-grid-row: 1;
       grid-area: pro3;
       text-align: center;
       padding: 0 1rem;
@@ -385,5 +399,70 @@ $japaneseText: "Kosugi Maru", sans-serif;
 
   .payment {
     width: 95%;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  .top-container {
+    overflow-y: hidden;
+    svg {
+      bottom: -200px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (-ms-high-contrast: none) {
+  .top-container {
+    svg {
+      bottom: -350px;
+    }
+  }
+
+  .about-me-container {
+    .my-skills-container {
+      -ms-grid-columns: 1fr 1fr;
+      -ms-grid-rows: auto auto;
+
+      .pro1-container {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+      }
+      .pro2-container {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+      }
+      .pro3-container {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) and (-ms-high-contrast: none) {
+  .top-container {
+    svg {
+      bottom: -600px;
+    }
+  }
+
+  .about-me-container {
+    .my-skills-container {
+      -ms-grid-columns: 1fr;
+      -ms-grid-rows: auto auto auto;
+
+      .pro1-container {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+      }
+      .pro2-container {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+      }
+      .pro3-container {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+      }
+    }
   }
 }
