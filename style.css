@@ -381,50 +381,50 @@
   margin-top: 0;
 }
 
-.my-projects #grid-box {
+.my-projects #flex-box {
   min-height: 10rem;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-  grid-template: "... .... ... .... ... .... ..." "... pro1 ... pro2 ... pro3 ..." 2fr "... .... ... .... ... .... ..."/2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.my-projects #grid-box .pro1-container {
-  -ms-grid-column: 1;
-  grid-column: 1;
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-row: 1;
-  grid-area: pro1;
+.my-projects #flex-box .pro-container {
+  width: 20rem;
   text-align: center;
   padding: 0 1rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
+  margin-bottom: 2rem;
 }
 
-.my-projects #grid-box .pro1-container:hover {
+.my-projects #flex-box .pro-container:hover {
   -webkit-transform: scale(1.01);
           transform: scale(1.01);
 }
 
-.my-projects #grid-box .pro1-container:hover img {
+.my-projects #flex-box .pro-container:hover img {
   opacity: 0.55;
 }
 
-.my-projects #grid-box .pro1-container img {
+.my-projects #flex-box .pro-container img {
   width: 90%;
   height: auto;
   border-radius: 20px;
 }
 
-.my-projects #grid-box .pro1-container:hover .show-more {
+.my-projects #flex-box .pro-container:hover .show-more {
   opacity: 1;
 }
 
-.my-projects #grid-box .pro1-container .show-more {
+.my-projects #flex-box .pro-container .show-more {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -436,94 +436,32 @@
   font-weight: bolder;
 }
 
-.my-projects #grid-box .pro2-container {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-row: 1;
-  grid-area: pro2;
-  text-align: center;
-  padding: 0 1rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+.my-projects #flex-box .pro-container img {
+  width: 100%;
+  height: 378.396px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border: #162447 solid 2px;
 }
 
-.my-projects #grid-box .pro2-container:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
+.my-projects #flex-box .pro2-container {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
 }
 
-.my-projects #grid-box .pro2-container:hover img {
-  opacity: 0.55;
+.my-projects #flex-box .pro5-container {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
 }
 
-.my-projects #grid-box .pro2-container img {
-  width: 90%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.my-projects #grid-box .pro2-container:hover .show-more {
-  opacity: 1;
-}
-
-.my-projects #grid-box .pro2-container .show-more {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  color: #382e2e;
-  font-family: "Kosugi Maru", sans-serif;
-  font-weight: bolder;
-}
-
-.my-projects #grid-box .pro3-container {
-  -ms-grid-column: 3;
-  grid-column: 3;
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-row: 1;
-  grid-area: pro3;
-  text-align: center;
-  padding: 0 1rem;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.my-projects #grid-box .pro3-container:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
-.my-projects #grid-box .pro3-container:hover img {
-  opacity: 0.55;
-}
-
-.my-projects #grid-box .pro3-container img {
-  width: 90%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.my-projects #grid-box .pro3-container:hover .show-more {
-  opacity: 1;
-}
-
-.my-projects #grid-box .pro3-container .show-more {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  opacity: 0;
-  color: #382e2e;
-  font-family: "Kosugi Maru", sans-serif;
-  font-weight: bolder;
+.my-projects #flex-box .pro6-container {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .correspondence-contents {
@@ -635,9 +573,6 @@
   .about-me-container .my-skills-container .my-skills li i {
     font-size: 2.5rem;
   }
-  .my-projects #grid-box {
-    grid-template: "... .... ... .... ..." "... pro1 ... pro2 ..." 2fr "... .... ... .... ..." 1rem "... pro3 ... .... ..." 2fr "... .... ... .... ..."/2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
-  }
   .correspondence-contents img {
     width: 85vw;
   }
@@ -655,16 +590,6 @@
   }
   .about-me-container .my-skills-container .my-skills li h4 {
     margin-top: 0;
-  }
-  .my-projects #grid-box {
-    grid-template: "... .... ..."
- "... pro1 ..." 2fr
- "... .... ..." 1rem
- "... pro2 ..." 2fr
- "... .... ..." 1rem
- "... pro3 ..." 2fr
- "... .... ..."
- / 1rem 1fr 1rem;
   }
   .payment {
     width: 95%;
@@ -684,43 +609,11 @@
   .top-container svg {
     bottom: -350px;
   }
-  .about-me-container .my-skills-container {
-    -ms-grid-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto;
-  }
-  .about-me-container .my-skills-container .pro1-container {
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-  }
-  .about-me-container .my-skills-container .pro2-container {
-    -ms-grid-column: 2;
-    -ms-grid-row: 1;
-  }
-  .about-me-container .my-skills-container .pro3-container {
-    -ms-grid-column: 1;
-    -ms-grid-row: 2;
-  }
 }
 
 @media screen and (max-width: 568px) and (-ms-high-contrast: none) {
   .top-container svg {
     bottom: -600px;
-  }
-  .about-me-container .my-skills-container {
-    -ms-grid-columns: 1fr;
-    -ms-grid-rows: auto auto auto;
-  }
-  .about-me-container .my-skills-container .pro1-container {
-    -ms-grid-column: 1;
-    -ms-grid-row: 1;
-  }
-  .about-me-container .my-skills-container .pro2-container {
-    -ms-grid-column: 1;
-    -ms-grid-row: 2;
-  }
-  .about-me-container .my-skills-container .pro3-container {
-    -ms-grid-column: 1;
-    -ms-grid-row: 3;
   }
 }
 
