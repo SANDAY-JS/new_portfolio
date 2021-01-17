@@ -39,7 +39,7 @@ $japaneseText: "Kosugi Maru", sans-serif;
   }
 }
 
-@mixin gridItems {
+@mixin flexItems {
   &:hover img {
     opacity: 0.55;
   }
@@ -155,6 +155,7 @@ $japaneseText: "Kosugi Maru", sans-serif;
   }
 }
 
+// About Me
 .about-me-container {
   width: 60vw;
   padding: 4rem 2rem;
@@ -198,59 +199,44 @@ $japaneseText: "Kosugi Maru", sans-serif;
   }
 }
 
+// My projects
 .my-projects {
-  #grid-box {
+  #flex-box {
     min-height: 10rem;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: auto;
-    grid-template:
-      "... .... ... .... ... .... ..."
-      "... pro1 ... pro2 ... pro3 ..." 2fr
-      "... .... ... .... ... .... ..."
-      / 2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
 
-    .pro1-container {
-      grid-column: 1;
-      grid-row: 1;
-      -ms-grid-column: 1;
-      -ms-grid-row: 1;
-      grid-area: pro1;
+    .pro-container {
+      width: 20rem;
       text-align: center;
       padding: 0 1rem;
       transition: all 0.3s;
       position: relative;
+      margin-bottom: 2rem;
 
       @include hoverTransform(scale(1.01));
-      @include gridItems();
+      @include flexItems();
       @include showMore();
+
+      img {
+        width: 100%;
+        height: 378.396px;
+        object-fit: cover;
+        object-position: top;
+        border: $big-text-color solid 2px;
+      }
     }
+
     .pro2-container {
-      grid-column: 2;
-      grid-row: 1;
-      -ms-grid-column: 2;
-      -ms-grid-row: 1;
-      grid-area: pro2;
-      text-align: center;
-      padding: 0 1rem;
-      transition: all 0.5s;
-      @include hoverTransform(scale(1.01));
-      @include gridItems();
-      @include showMore();
+      order: 6;
     }
-    .pro3-container {
-      grid-column: 3;
-      grid-row: 1;
-      -ms-grid-column: 3;
-      -ms-grid-row: 1;
-      grid-area: pro3;
-      text-align: center;
-      padding: 0 1rem;
-      transition: all 0.5s;
-
-      @include hoverTransform(scale(1.01));
-      @include gridItems();
-      @include showMore();
+    .pro5-container {
+      order: -2;
+    }
+    .pro6-container {
+      order: -1;
     }
   }
 }
@@ -347,18 +333,6 @@ $japaneseText: "Kosugi Maru", sans-serif;
     }
   }
 
-  .my-projects {
-    #grid-box {
-      grid-template:
-        "... .... ... .... ..."
-        "... pro1 ... pro2 ..." 2fr
-        "... .... ... .... ..." 1rem
-        "... pro3 ... .... ..." 2fr
-        "... .... ... .... ..."
-        / 2rem minmax(4rem, 1fr) auto minmax(4rem, 1fr) 2rem;
-    }
-  }
-
   .correspondence-contents {
     img {
       width: 85vw;
@@ -383,19 +357,6 @@ $japaneseText: "Kosugi Maru", sans-serif;
       }
     }
   }
-  .my-projects {
-    #grid-box {
-      grid-template:
-        "... .... ..."
-        "... pro1 ..." 2fr
-        "... .... ..." 1rem
-        "... pro2 ..." 2fr
-        "... .... ..." 1rem
-        "... pro3 ..." 2fr
-        "... .... ..."
-        / 1rem 1fr 1rem;
-    }
-  }
 
   .payment {
     width: 95%;
@@ -417,52 +378,12 @@ $japaneseText: "Kosugi Maru", sans-serif;
       bottom: -350px;
     }
   }
-
-  .about-me-container {
-    .my-skills-container {
-      -ms-grid-columns: 1fr 1fr;
-      -ms-grid-rows: auto auto;
-
-      .pro1-container {
-        -ms-grid-column: 1;
-        -ms-grid-row: 1;
-      }
-      .pro2-container {
-        -ms-grid-column: 2;
-        -ms-grid-row: 1;
-      }
-      .pro3-container {
-        -ms-grid-column: 1;
-        -ms-grid-row: 2;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 568px) and (-ms-high-contrast: none) {
   .top-container {
     svg {
       bottom: -600px;
-    }
-  }
-
-  .about-me-container {
-    .my-skills-container {
-      -ms-grid-columns: 1fr;
-      -ms-grid-rows: auto auto auto;
-
-      .pro1-container {
-        -ms-grid-column: 1;
-        -ms-grid-row: 1;
-      }
-      .pro2-container {
-        -ms-grid-column: 1;
-        -ms-grid-row: 2;
-      }
-      .pro3-container {
-        -ms-grid-column: 1;
-        -ms-grid-row: 3;
-      }
     }
   }
 }
