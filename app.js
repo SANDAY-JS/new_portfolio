@@ -27,6 +27,7 @@ const payment = document.querySelector("#payment");
 function click() {
   headerMenuContainer.classList.toggle("click");
   hamburgerBackground.classList.toggle("click");
+  console.log("IE");
 }
 
 function deltaFunction() {
@@ -70,8 +71,10 @@ function hoverAnimationMove(e) {
   let xAxis = (window.innerWidth - e.pageX) / 10;
   let yAxis = (window.innerHeight - e.pageY) / 10;
 
-  SunHiguchi.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
-  smallText.style.transform = `rotateY(${yAxis}deg) rotateX(${xAxis}deg)`;
+  SunHiguchi.style.transform =
+    "rotateY(" + yAxis + "deg) rotateX(" + xAxis + "deg)";
+  smallText.style.transform =
+    "rotateY(" + yAxis + "deg) rotateX( " + xAxis + "deg)";
 }
 
 function hoverAnimationIn(e) {
@@ -116,7 +119,6 @@ function toSupportsSection() {
 function toPaymentSection() {
   const paymentHeight = payment.offsetTop - 30;
   window.scrollTo(0, paymentHeight);
-  console.log("to the payment!");
 }
 
 function toContactSection() {
@@ -126,8 +128,6 @@ function toContactSection() {
     1000;
   window.scroll(0, contactHeight);
 }
-
-// ↑コンストラクターにできんかなー？
 
 function changeMenuColor() {
   if (
@@ -162,15 +162,20 @@ function changeMenuColor() {
 // Events
 hamburgerBackground.addEventListener("click", click);
 
-toAbout.forEach((toAboutBtn) =>
-  toAboutBtn.addEventListener("click", toAboutSection)
-);
+// For IE
+const toAboutArray = Array.prototype.slice.call(toAbout);
+toAboutArray.forEach(function (toAboutBtn) {
+  toAboutBtn.addEventListener("click", toAboutSection);
+});
+
 toTopBtn.addEventListener("click", toTheTop);
 toProjects.addEventListener("click", toProjectsSection);
 toSupports.addEventListener("click", toSupportsSection);
-toPayment.forEach((paymentBtn) =>
-  paymentBtn.addEventListener("click", toPaymentSection)
-);
+
+const toPaymentArray = Array.prototype.slice.call(toPayment);
+toPaymentArray.forEach(function (paymentBtn) {
+  paymentBtn.addEventListener("click", toPaymentSection);
+});
 toContact.addEventListener("click", toContactSection);
 
 hoverCard.addEventListener("mousemove", hoverAnimationMove);
@@ -180,3 +185,5 @@ hoverCard.addEventListener("mouseleave", hoverAnimationOut);
 window.addEventListener("wheel", findScrollDirectionOtherBrowsers);
 window.addEventListener("scroll", changeMenuColor);
 window.addEventListener("scroll", topBtnDisplay);
+
+console.log("HI");
