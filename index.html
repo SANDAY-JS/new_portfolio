@@ -23,6 +23,7 @@
       href="./images/source-code-icon-64-213242.png"
     />
     <title>My Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
   <body>
     <!-- Header -->
@@ -69,21 +70,21 @@
 
       <!-- About -->
       <section class="about-me-container">
-        <h2 class="big-text" id="about-me">About me</h2>
-        <p class="text">
-          ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb制作活動を行っています、樋口賛と申します。
-        </p>
-        <br />
-        <p class="text">
-          Web制作やWebデザインを始め、ワードプレスのカスタマイズなど、様々な業務を受け付けております。
-        </p>
-        <br />
-        <p class="text">
-          下記に可能な業務内容などを記載しておりますので、ご覧いただけますと幸いです。
-        </p>
-
+        <div class="about-me-box" id="slideInElement">
+          <h2 class="big-text" id="about-me">About me</h2>
+          <p class="text">
+            ご覧頂きありがとうございます。滋賀県、愛知県を拠点に大学生エンジニアとしてWeb制作活動を行っています、樋口賛と申します。
+          </p>
+          <br />
+          <p class="text">
+            Web制作やWebデザインを始め、ワードプレスのカスタマイズなど、様々な業務を受け付けております。
+          </p>
+          <br />
+          <p class="text">
+            下記に可能な業務内容などを記載しておりますので、ご覧いただけますと幸いです。
+          </p>
         <!-- Skills -->
-        <div class="my-skills-container">
+        <div class="my-skills-container" id="slideInElement">
           <h4>My Skills</h4>
           <ul class="my-skills">
             <li>
@@ -108,6 +109,7 @@
             </li>
           </ul>
         </div>
+        </div>
       </section>
 
       <!-- Projects -->
@@ -115,31 +117,46 @@
         <h2 class="big-text" id="my-projects">
           My projects <br /><span class="japanese-big-text">制作実績</span>
         </h2>
-        <div class="porjects-box" id="flex-box">
-          <div class="pro1-container pro-container">
-            <small class="project-text-1">所属バンドのホームページ(SP)</small>
-            <a href="https://sanday-js.github.io/AVALANCHE/" target="_blank">
+        <div class="porjects-box flex-box" id="slideInElement">
+        
+        <div class="pro1-container pro-container" id="slideInElement">
+          <small class="project-text-1">個人運営ブログサイト</small>
+          <a href="https://sunday-theater.com">
+            <img
+              class="my-created-website-img"
+              src="https://github.com/SANDAY-JS/new_portfolio/blob/main/sunday-theater.jpg?raw=true"
+              alt="sunday theater image"
+            />
+            <p class="show-more">ページに飛ぶ</p></a
+          >
+        </div>
+
+          <div class="pro2-container pro-container" id="slideInElement">
+            <small class="project-text-2">模写サイト1</small>
+            <a href="https://sanday-js.github.io/mosha1/">
               <img
                 class="my-created-website-img"
-                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/avalanche.jpg?raw=true"
-                alt="band image"
+                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/mosha1.jpg?raw=true"
+                alt="created website image"
               />
               <p class="show-more">ページに飛ぶ</p></a
             >
           </div>
-          <div class="pro2-container pro-container">
-            <small class="project-text-2">Wordpress版ポートフォリオ</small>
-            <a href="http://sundaythearer.rf.gd/" target="_blank">
-              <img
-                class="my-created-website-img"
-                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/portfolio.jpg?raw=true"
-                alt="band image"
-              />
-              <p class="show-more">ページに飛ぶ</p></a
-            >
-          </div>
-          <div class="pro3-container pro-container">
-            <small class="project-text-3">自作メモアプリ</small>
+
+            <div class="pro3-container pro-container" id="slideInElement">
+              <small class="project-text-3">所属バンドのホームページ(SP)</small>
+              <a href="https://sanday-js.github.io/AVALANCHE/" target="_blank">
+                <img
+                  class="my-created-website-img"
+                  src="https://github.com/SANDAY-JS/new_portfolio/blob/main/avalanche.jpg?raw=true"
+                  alt="band image"
+                />
+                <p class="show-more">ページに飛ぶ</p></a
+              >
+            </div>
+          
+          <div class="pro4-container pro-container" id="slideInElement">
+            <small class="project-text-4">自作メモアプリ</small>
             <a href="https://sanday-js.github.io/Memo-App/devotion/index.html">
               <img
                 class="my-created-website-img"
@@ -149,8 +166,9 @@
               <p class="show-more">ページに飛ぶ</p></a
             >
           </div>
-          <div class="pro4-container pro-container">
-            <small class="project-text-4">料理アプリ</small>
+
+          <div class="pro5-container pro-container" id="slideInElement">
+            <small class="project-text-5">料理アプリ</small>
             <a href="https://sanday-js.github.io/cookpad-app">
               <img
                 class="my-created-website-img"
@@ -160,24 +178,14 @@
               <p class="show-more">ページに飛ぶ</p></a
             >
           </div>
-          <div class="pro5-container pro-container">
-            <small class="project-text-5">個人運営ブログサイト</small>
-            <a href="https://sunday-theater.com">
+          
+          <div class="pro6-container pro-container" id="slideInElement">
+            <small class="project-text-6">Wordpress版ポートフォリオ</small>
+            <a href="http://sundaythearer.rf.gd/" target="_blank">
               <img
                 class="my-created-website-img"
-                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/sunday-theater.jpg?raw=true"
-                alt="sunday theater image"
-              />
-              <p class="show-more">ページに飛ぶ</p></a
-            >
-          </div>
-          <div class="pro6-container pro-container">
-            <small class="project-text-6">模写サイト1</small>
-            <a href="https://sanday-js.github.io/mosha1/">
-              <img
-                class="my-created-website-img"
-                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/mosha1.jpg?raw=true"
-                alt="created website image"
+                src="https://github.com/SANDAY-JS/new_portfolio/blob/main/portfolio.jpg?raw=true"
+                alt="band image"
               />
               <p class="show-more">ページに飛ぶ</p></a
             >
@@ -194,7 +202,7 @@
         </h2>
 
         <!-- Ele1 -->
-        <div class="first-element element">
+        <div class="first-element element" id="slideInElement">
           <div class="element-inside-container">
             <img
               src="https://github.com/SANDAY-JS/new_portfolio/blob/main/web-production.jpg?raw=true"
@@ -213,7 +221,7 @@
         <hr />
 
         <!-- Ele2 -->
-        <div class="second-element element">
+        <div class="second-element element" id="slideInElement">
           <div class="element-inside-container">
             <img
               src="https://github.com/SANDAY-JS/new_portfolio/blob/main/coding.jpg?raw=true"
@@ -232,7 +240,7 @@
         <hr />
 
         <!-- Ele3 -->
-        <div class="third-element element">
+        <div class="third-element element" id="slideInElement">
           <div class="element-inside-container">
             <img
               src="https://github.com/SANDAY-JS/new_portfolio/blob/main/wordpress.jpg?raw=true"
@@ -258,7 +266,7 @@
           <span class="japanese-big-text">料金</span>
         </h2>
 
-        <div class="web-production-payment margin-box">
+        <div class="web-production-payment payment-element" id="slideInElement" >
           <h3>Web制作</h3>
           <table class="japanese-text">
             <thead>
@@ -290,7 +298,7 @@
           </table>
         </div>
 
-        <div class="codong-payment margin-box">
+        <div class="codong-payment payment-element" id="slideInElement" >
           <h3>コーディング</h3>
           <table class="japanese-text">
             <thead>
@@ -320,7 +328,7 @@
           </table>
         </div>
 
-        <div class="wordpress-payment margin-box">
+        <div class="wordpress-payment payment-element" id="slideInElement" >
           <h3 class="pointer-none">Wordpress制作、カスタマイズ</h3>
           <table class="japanese-text">
             <thead>
