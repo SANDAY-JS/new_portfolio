@@ -1,4 +1,6 @@
+// ----
 // DOMs
+// ----
 const hamburgerBackground = document.querySelector(".hamburger-background");
 const headerMenuContainer = document.querySelector(".header-menu-container");
 const line = document.querySelectorAll(".line");
@@ -15,11 +17,15 @@ const toSupports = document.querySelector("#to-supports");
 const toPayment = document.querySelectorAll("#to-payment");
 const toContact = document.querySelector("#to-contact");
 
+let aboutMeParent = document.querySelector(".about-me-container");
 const aboutMe = document.querySelector("#about-me");
 const myProjects = document.querySelector("#my-projects");
 const supportContents = document.querySelector("#support-contents");
 const payment = document.querySelector("#payment");
 // const contact = document.querySelector("#contact");
+
+// Slide Animation Elements
+const slideInElements = document.querySelectorAll("#slideInElement");
 
 /*--------------------
 -------- Methods -----
@@ -27,7 +33,6 @@ const payment = document.querySelector("#payment");
 function click() {
   headerMenuContainer.classList.toggle("click");
   hamburgerBackground.classList.toggle("click");
-  console.log("IE");
 }
 
 function deltaFunction() {
@@ -86,7 +91,7 @@ function hoverAnimationIn(e) {
   smallText.style.transform = "translateZ(100px) rotateZ(-40deg)";
 }
 
-function hoverAnimationOut(e) {
+function hoverAnimationOut() {
   SunHiguchi.style.transition = "all .3s ease";
   SunHiguchi.style.transform = "rotateY(0deg) rotateX(0deg)";
   smallText.style.transition = "all .3s ease";
@@ -102,8 +107,11 @@ function toTheTop() {
 }
 
 function toAboutSection() {
-  const aboutMeHeight = aboutMe.offsetTop - 30;
-  window.scrollTo(0, aboutMeHeight);
+  // aboutMeParent = aboutMe.offsetParent;
+  const aboutMeHeight = aboutMe.getBoundingClientRect().top;
+  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  window.scrollTo(0, aboutMeHeight + scrollTop);
+  console.log(aboutMeHeight + scrollTop);
 }
 
 function toProjectsSection() {
@@ -159,7 +167,28 @@ function changeMenuColor() {
   }
 }
 
+function slideElementsInWindow() {
+  for (let i = 0; i < slideInElements.length; i++) {
+    const slideInEl = slideInElements[i];
+    let el_height = slideInEl.offsetHeight;
+
+    let offsetY = slideInEl.getBoundingClientRect().top;
+    let screenHeight = window.outerHeight;
+
+    let el_position = offsetY - screenHeight + 300;
+
+    if (-screenHeight <= el_position + el_height && el_position < 0) {
+      if (!slideInEl.classList.contains("within-window")) {
+        slideInEl.classList.add("within-window");
+      }
+    }
+  }
+}
+
+// ------
 // Events
+// ------
+
 hamburgerBackground.addEventListener("click", click);
 
 // For IE
@@ -185,5 +214,7 @@ hoverCard.addEventListener("mouseleave", hoverAnimationOut);
 window.addEventListener("wheel", findScrollDirectionOtherBrowsers);
 window.addEventListener("scroll", changeMenuColor);
 window.addEventListener("scroll", topBtnDisplay);
+window.addEventListener("load", slideElementsInWindow);
+window.addEventListener("scroll", slideElementsInWindow);
 
-console.log("HI");
+console.log("Thank you for looking console.");
