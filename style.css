@@ -133,9 +133,14 @@
   }
 }
 
+#slideInElement {
+  opacity: 0;
+}
+
 .within-window {
   -webkit-transform: translate(0, 0) !important;
           transform: translate(0, 0) !important;
+  opacity: 1 !important;
 }
 
 .top-container {
@@ -936,7 +941,7 @@ svg.second-svg path {
   text-decoration: none;
 }
 
-html {
+html:focus-within {
   scroll-behavior: smooth;
 }
 
