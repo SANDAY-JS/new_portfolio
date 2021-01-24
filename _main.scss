@@ -74,7 +74,12 @@ $japaneseText: "Kosugi Maru", sans-serif;
 }
 
 @keyframes logoShowDown {
-  to {
+  30% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    z-index: -100;
     opacity: 0;
     pointer-events: none;
   }
@@ -108,7 +113,7 @@ $japaneseText: "Kosugi Maru", sans-serif;
   left: 0;
   right: 0;
 
-  animation: logoShowDown 1s forwards 5s;
+  animation: logoShowDown 2s forwards 5s;
 
   #name-svg {
     position: absolute;
@@ -583,26 +588,6 @@ $japaneseText: "Kosugi Maru", sans-serif;
       bottom: -350px;
     }
   }
-
-  // .about-me-container {
-  //   .my-skills-container {
-  //     -ms-grid-columns: 1fr 1fr;
-  //     -ms-grid-rows: auto auto;
-
-  //     .pro1-container {
-  //       -ms-grid-column: 1;
-  //       -ms-grid-row: 1;
-  //     }
-  //     .pro2-container {
-  //       -ms-grid-column: 2;
-  //       -ms-grid-row: 1;
-  //     }
-  //     .pro3-container {
-  //       -ms-grid-column: 1;
-  //       -ms-grid-row: 2;
-  //     }
-  //   }
-  // }
 }
 
 @media screen and (max-width: 568px) and (-ms-high-contrast: none) {
@@ -611,24 +596,4 @@ $japaneseText: "Kosugi Maru", sans-serif;
       bottom: -600px;
     }
   }
-
-  // .about-me-container {
-  //   .my-skills-container {
-  //     -ms-grid-columns: 1fr;
-  //     -ms-grid-rows: auto auto auto;
-
-  //     .pro1-container {
-  //       -ms-grid-column: 1;
-  //       -ms-grid-row: 1;
-  //     }
-  //     .pro2-container {
-  //       -ms-grid-column: 1;
-  //       -ms-grid-row: 2;
-  //     }
-  //     .pro3-container {
-  //       -ms-grid-column: 1;
-  //       -ms-grid-row: 3;
-  //     }
-  //   }
-  // }
 }
