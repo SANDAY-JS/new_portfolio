@@ -73,9 +73,162 @@ $japaneseText: "Kosugi Maru", sans-serif;
   opacity: 1 !important;
 }
 
-// Codes
+@keyframes logoShowDown {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-anim {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #fafafa;
+  }
+}
 
 // Top Container
+.whole-page {
+  display: inline-block;
+  width: 100vw;
+  height: 100vh;
+  background: $top-background-color;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  animation: logoShowDown 1s forwards 5s;
+
+  #name-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    animation: fill-anim 1s ease forwards 3.3s;
+
+    mask {
+      display: none;
+    }
+
+    path {
+      stroke-width: 3px;
+
+      &:nth-child(2) {
+        stroke-dasharray: 493.91278076171875;
+        stroke-dashoffset: 493.91278076171875;
+        animation: line-anim 3s forwards;
+      }
+      &:nth-child(3) {
+        stroke-dasharray: 422.16241455078125;
+        stroke-dashoffset: 422.16241455078125;
+        animation: line-anim 3s forwards;
+      }
+      &:nth-child(4) {
+        stroke-dasharray: 422.50054931640625;
+        stroke-dashoffset: 422.50054931640625;
+        animation: line-anim 3s forwards 0.3s;
+      }
+      &:nth-child(5) {
+        stroke-dasharray: 534.5279541015625;
+        stroke-dashoffset: 534.5279541015625;
+        animation: line-anim 3s forwards 0.6s;
+      }
+      &:nth-child(6) {
+        stroke-dasharray: 239.8092498779297;
+        stroke-dashoffset: 239.8092498779297;
+        animation: line-anim 3s forwards 0.9s;
+      }
+      &:nth-child(7) {
+        stroke-dasharray: 693.0794067382812;
+        stroke-dashoffset: 693.0794067382812;
+        animation: line-anim 3s forwards 1.2s;
+      }
+      &:nth-child(8) {
+        stroke-dasharray: 422.1619873046875;
+        stroke-dashoffset: 422.1619873046875;
+        animation: line-anim 3s forwards 1.5s;
+      }
+      &:nth-child(9) {
+        stroke-dasharray: 398.9294738769531;
+        stroke-dashoffset: 398.9294738769531;
+        animation: line-anim 3s forwards 1.8s;
+      }
+      &:nth-child(10) {
+        stroke-dasharray: 477.7682189941406;
+        stroke-dashoffset: 477.7682189941406;
+        animation: line-anim 3s forwards 2.1s;
+      }
+      &:nth-child(11) {
+        stroke-dasharray: 239.8092041015625;
+        stroke-dashoffset: 239.8092041015625;
+        animation: line-anim 3s forwards 2.4s;
+      }
+      &:nth-child(12) {
+        stroke-dasharray: 493.91278076171875;
+        stroke-dashoffset: 493.91278076171875;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(13) {
+        stroke-dasharray: 422.16241455078125;
+        stroke-dashoffset: 422.16241455078125;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(14) {
+        stroke-dasharray: 422.50054931640625;
+        stroke-dashoffset: 422.50054931640625;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(15) {
+        stroke-dasharray: 534.5279541015625;
+        stroke-dashoffset: 534.5279541015625;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(16) {
+        stroke-dasharray: 239.8092498779297;
+        stroke-dashoffset: 239.8092498779297;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(17) {
+        stroke-dasharray: 693.0794067382812;
+        stroke-dashoffset: 693.0794067382812;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(18) {
+        stroke-dasharray: 422.1619873046875;
+        stroke-dashoffset: 422.1619873046875;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(19) {
+        stroke-dasharray: 398.9294738769531;
+        stroke-dashoffset: 398.9294738769531;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(20) {
+        stroke-dasharray: 477.7682189941406;
+        stroke-dashoffset: 477.7682189941406;
+        animation: line-anim 3s forwards 2.7s;
+      }
+      &:nth-child(1) {
+        stroke-dasharray: 239.8092041015625;
+        stroke-dashoffset: 239.8092041015625;
+        animation: line-anim 3s forwards 2.7s;
+      }
+    }
+  }
+}
+
 #slideInElement {
   opacity: 0;
 }
@@ -258,14 +411,14 @@ $japaneseText: "Kosugi Maru", sans-serif;
       transition-delay: 0.8s;
     }
     .pro4-container {
-      transform: translate(-100vw, 20vh);
+      transform: translate(-100vw, 0);
     }
     .pro5-container {
-      transform: translate(-100vw, 20vh);
+      transform: translate(-100vw, 0);
       transition-delay: 0.4s;
     }
     .pro6-container {
-      transform: translate(100vw, 20vh);
+      transform: translate(100vw, 0);
       transition-delay: 0.8s;
     }
   }
