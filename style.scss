@@ -24,7 +24,7 @@ $pinkColor: #e43f5a;
   text-decoration: none;
 }
 
-html {
+html:focus-within {
   scroll-behavior: smooth;
 }
 
@@ -34,6 +34,14 @@ body {
   font-family: "Poppins", sans-serif;
   background: $backgroundColor;
   overflow-x: hidden;
+}
+
+.whole-wrapper {
+  max-width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  pointer-events: none;
+  scroll-behavior: smooth;
 }
 
 h2 {
