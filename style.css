@@ -134,14 +134,24 @@
 }
 
 @-webkit-keyframes logoShowDown {
-  to {
+  30% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    z-index: -100;
     opacity: 0;
     pointer-events: none;
   }
 }
 
 @keyframes logoShowDown {
-  to {
+  30% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    z-index: -100;
     opacity: 0;
     pointer-events: none;
   }
@@ -188,8 +198,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  -webkit-animation: logoShowDown 1s forwards 5s;
-          animation: logoShowDown 1s forwards 5s;
+  -webkit-animation: logoShowDown 2s forwards 5s;
+          animation: logoShowDown 2s forwards 5s;
 }
 
 .whole-page #name-svg {
@@ -1169,6 +1179,14 @@ body {
   font-family: "Poppins", sans-serif;
   background: #eee;
   overflow-x: hidden;
+}
+
+.whole-wrapper {
+  max-width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  pointer-events: none;
+  scroll-behavior: smooth;
 }
 
 h2 {
