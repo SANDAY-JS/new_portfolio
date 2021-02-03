@@ -737,6 +737,11 @@
           transition-delay: 0.8s;
 }
 
+.my-projects .flex-box .pro7-container {
+  -webkit-transform: translate(100vw, 20vh);
+          transform: translate(100vw, 20vh);
+}
+
 @-webkit-keyframes scaleTransform {
   0% {
     -webkit-transform: scale(1);
