@@ -129,6 +129,8 @@ $japaneseText: "Kosugi Maru", sans-serif;
 
     path {
       stroke-width: 3px;
+      width: 1ch;
+      height: auto;
 
       &:nth-child(2) {
         stroke-dasharray: 493.91278076171875;
@@ -425,6 +427,9 @@ $japaneseText: "Kosugi Maru", sans-serif;
     .pro6-container {
       transform: translate(100vw, 0);
       transition-delay: 0.8s;
+    }
+    .pro7-container {
+      transform: translate(100vw, 20vh);
     }
   }
 }
