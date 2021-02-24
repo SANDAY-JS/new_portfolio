@@ -421,7 +421,7 @@ $japaneseText: "Kosugi Maru", sans-serif;
       transform: translate(-100vw, 0);
     }
     .pro5-container {
-      transform: translate(-100vw, 0);
+      transform: translate(100vw, 0);
       transition-delay: 0.4s;
     }
     .pro6-container {
@@ -429,7 +429,11 @@ $japaneseText: "Kosugi Maru", sans-serif;
       transition-delay: 0.8s;
     }
     .pro7-container {
+      transform: translate(-100vw, 20vh);
+    }
+    .pro8-container {
       transform: translate(100vw, 20vh);
+      transition-delay: 0.4s;
     }
   }
 }
