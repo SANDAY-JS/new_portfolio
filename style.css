@@ -724,8 +724,8 @@
 }
 
 .my-projects .flex-box .pro5-container {
-  -webkit-transform: translate(-100vw, 0);
-          transform: translate(-100vw, 0);
+  -webkit-transform: translate(100vw, 0);
+          transform: translate(100vw, 0);
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
@@ -738,8 +738,15 @@
 }
 
 .my-projects .flex-box .pro7-container {
+  -webkit-transform: translate(-100vw, 20vh);
+          transform: translate(-100vw, 20vh);
+}
+
+.my-projects .flex-box .pro8-container {
   -webkit-transform: translate(100vw, 20vh);
           transform: translate(100vw, 20vh);
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
 }
 
 @-webkit-keyframes scaleTransform {
