@@ -699,54 +699,23 @@
   border: #162447 solid 2px;
 }
 
-.my-projects .flex-box .pro1-container {
+.my-projects .flex-box .pro-container:nth-child(3n + 1) {
   -webkit-transform: translate(-100vw, -20vh);
           transform: translate(-100vw, -20vh);
 }
 
-.my-projects .flex-box .pro2-container {
+.my-projects .flex-box .pro-container:nth-child(3n + 2) {
   -webkit-transform: translate(100vw, -20vh);
           transform: translate(100vw, -20vh);
   -webkit-transition-delay: 0.4s;
           transition-delay: 0.4s;
 }
 
-.my-projects .flex-box .pro3-container {
+.my-projects .flex-box .pro-container:nth-child(3n) {
   -webkit-transform: translate(100vw, -20vh);
           transform: translate(100vw, -20vh);
   -webkit-transition-delay: 0.8s;
           transition-delay: 0.8s;
-}
-
-.my-projects .flex-box .pro4-container {
-  -webkit-transform: translate(-100vw, 0);
-          transform: translate(-100vw, 0);
-}
-
-.my-projects .flex-box .pro5-container {
-  -webkit-transform: translate(100vw, 0);
-          transform: translate(100vw, 0);
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-}
-
-.my-projects .flex-box .pro6-container {
-  -webkit-transform: translate(100vw, 0);
-          transform: translate(100vw, 0);
-  -webkit-transition-delay: 0.8s;
-          transition-delay: 0.8s;
-}
-
-.my-projects .flex-box .pro7-container {
-  -webkit-transform: translate(-100vw, 20vh);
-          transform: translate(-100vw, 20vh);
-}
-
-.my-projects .flex-box .pro8-container {
-  -webkit-transform: translate(100vw, 20vh);
-          transform: translate(100vw, 20vh);
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
 }
 
 @-webkit-keyframes scaleTransform {
