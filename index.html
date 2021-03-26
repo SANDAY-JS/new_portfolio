@@ -468,7 +468,7 @@
           Contact<br />
           <span class="japanese-big-text"> お問い合わせ </span>
         </h2>
-        <div class="contact-means">
+        <div style="position: relative; class="contact-means">
           <ul>
             <li>
               <a href="https://github.com/SANDAY-JS" target="_blank"
@@ -524,7 +524,7 @@
             ><br />
 
             <button type="submit" class="submit-btn">送信</button>
-            <p id="my-form-status"></p>
+            <p style="color: #fafafa; position: absolute;" id="my-form-status"></p>
           </form>
         </div>
       </section>
@@ -550,10 +550,10 @@
             'Accept': 'application/json'
         }
       }).then(response => {
-        status.innerHTML = "Thanks for your submission!";
+        status.innerHTML = "送信されました";
         form.reset()
       }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        status.innerHTML = "!送信に失敗しました"
       });
     }
     form.addEventListener("submit", handleSubmit)
