@@ -1021,6 +1021,28 @@ svg.second-svg path {
   grid-area: btn;
 }
 
+.contact .contact-means #my-form-status {
+  color: #eee;
+  font-size: 14px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  border-radius: 5px;
+  padding: 3px 9px;
+  display: none;
+}
+
+.contact .contact-means #my-form-status.succeed {
+  display: block;
+  background: #e43f5a;
+}
+
+.contact .contact-means #my-form-status.error {
+  display: block;
+  background: #a7001c;
+}
+
 .top-btn {
   position: fixed;
   bottom: 1rem;
