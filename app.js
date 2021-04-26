@@ -107,11 +107,9 @@ function toTheTop() {
 }
 
 function toAboutSection() {
-  // aboutMeParent = aboutMe.offsetParent;
   const aboutMeHeight = aboutMe.getBoundingClientRect().top;
-  scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   window.scrollTo(0, aboutMeHeight + scrollTop);
-  console.log(aboutMeHeight + scrollTop);
 }
 
 function toProjectsSection() {
